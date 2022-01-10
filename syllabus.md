@@ -22,7 +22,7 @@ you can read the [office hour description](misc/office-hour-description.md).
 Office Hours:
 * Mondays 12 - 1 PM
 * Tuesdays 2 - 3 PM
-* Wednesday 1 - 2 PM (remote)
+* Wednesdays 1 - 2 PM (remote)
 
 I am also happy to schedule additional meetings outside of office hours.
 
