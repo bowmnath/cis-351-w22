@@ -43,6 +43,7 @@ A | B | Y | Z |
 0 | 1 | 1 | 1 |
 1 | 0 | 0 | 1 |
 1 | 1 | 1 | 0 |
+
 ![circuit 1](images/simple_circuit_1.jpg)
 
 7. Give one possible Boolean expression for the circuit above.
