@@ -1,34 +1,10 @@
-In your groups, answer the following questions.
-No need to report the answers to me --
-this is just for practice.
-We may not get through all of the questions every week.
-You may want to take notes during the discussion,
-because these questions will be helpful in reviewing for exams.
-
-I will be dropping in and out of rooms to facilitate to the discussions and in
-case you have any questions.
-Think of it like me walking around the classroom and listening to different
-groups.
-Again, this isn't meant to be for a grade,
-so don't be concerned about giving a wrong answer even if I am in the room.
-You can also flag me down in Zoom if you have a question even if I'm not in the
-room
-(I think the button in Zoom looks like a question mark).
-
 Note: some questions are taken entirely or in part from your textbook.
 
-# Practice Questions
+# Computational Questions
 
-These questions don't require thinking about things in a new way so much as
-following instructions.
-That does not mean that they are easy or unimportant,
-but it does mean that they are not the best discussion questions.
-
-We may do some of these as a warm-up and/or come back to them if we have time,
-but we likely will not get through them all.
-If you are not confident that you know how to solve these and we do not have
-time to discuss them today,
-please come see me in office hours so we can work through them together.
+These questions are not particularly open-ended --
+you will want to practice these kinds of question with various numbers until
+you are confident you understand how to do them.
 
 P1. Give the value of the following base-7 number in base 10:
 143
@@ -46,6 +22,21 @@ but you should be able to solve the question without needing to convert.
 P5. What range of numbers can be represented in 6 bits using
 * unsigned binary numbers?
 * two's complement binary numbers?
+
+The next few questions involve "bitwise operations."
+I will give a brief explanation when we get to these,
+but the gist is that each hex number is really just short-hand for a binary
+number.
+Find the corresponding binary numbers,
+and apply the operation (`AND`, `OR`, or `XOR`) to each pair of bits
+independently.
+
+P6. What is the result of the bitwise operation `0xAC & 0x0F`?
+
+P7. What is the result of the bitwise operation `0xAC | 0x0F`?
+
+P8. What is the result of the bitwise operation `0xAC ^ 0x0F`?
+(The symbol ^ in this context means "Exclusive OR".)
 
 # General Questions
 
@@ -104,16 +95,9 @@ only on its inputs.
 How many rows would there be in the truth table for a 16-bit adder?
 Don't forget about the carry in.
 
-![example circuit](images/critical_path_1.jpg)
+11. Prove that the set `{AND, NOT}` is logically complete.
 
-11. Assume all gates cause a delay of 10 nanoseconds.
-What is the critical path through the circuit above?
+12. Design a circuit that returns `true` if a four-bit input represents the
+number 6, and `false` otherwise.
 
-12. Assume NOT gates cause a delay of just 3 nanoseconds,
-but all other gates cause a delay of 10 nanoseconds.
-Does that change the critical path through the circuit above?
-Why or why not?
-
-**Note:** There were not any Boolean algebra questions included here.
-This is because they will be covered on the homework --
-it does not mean you should ignore Boolean algebra.
+13. Design a circuit that returns `true` if a four-bit input represents the number 0, and `false` otherwise.
