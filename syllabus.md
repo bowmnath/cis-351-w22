@@ -239,11 +239,11 @@ Deadline to drop with a "W" grade: March 11, 2022, by 5 pm.
 
 Midterm Exam 1: Wednesday, February 2
 
-Midterm Exam 2: Wednesday, February 16
+Midterm Exam 2: Monday, February 21
 
-Midterm Exam 3: TBD
+Midterm Exam 3: Monday, March 21
 
-Midterm Exam 4: TBD
+Midterm Exam 4: Monday, April 4
 
 Final Exam: TBD
 
