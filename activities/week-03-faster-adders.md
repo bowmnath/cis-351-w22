@@ -70,9 +70,27 @@ However, you have a group member who you are pretty sure will not finish
 whatever tasks they are assigned in a timely manner.
 How can the concept of a critical path help you in this situation?
 
+8. Simplify the following Boolean algebra expressions:
+* `A + (AB'C)`
+* X'*(XYZ)'
+* (XY)' + X
+* A'BC + A'B'C + A'BC'
+
+9. Write the truth table for a full adder.
+
+10. Using full adders as black boxes,
+draw a ripple-carry adder.
+
+11. Consider a group of full adders making up a ripple-carry adder.
+Assume all gates have a delay of 8 nanoseconds
+If a full adder other than the first receives its carry-in at time 64,
+at what point can we be sure that full adder has correctly produced
+* its sum?
+* its carry-out?
+
 <!-- can't do anything below here today -->
 
-8. Consider the following mux and inputs.
+12. Consider the following mux and inputs.
 Note that the selector input is given in binary (hence the `B`).
 What is the output?
 How could you change the selector to get a different output?
@@ -93,30 +111,30 @@ How could you change the selector to get a different output?
 ```
 -->
 
-9. Consider a circuit with two inputs: `Num` (two bits) and `DoNot` (one bit).
+13. Consider a circuit with two inputs: `Num` (two bits) and `DoNot` (one bit).
 If `DoNot` is 0, the circuit outputs `Num`.
 Otherwise, the circuit outputs the bitwise NOT of `Num`.
 Create the circuit described using only muxes and NOT gates.
 
-10. If `Num` were considered as a two's complement binary number,
+14. If `Num` were considered as a two's complement binary number,
 would the circuit above compute `-Num` when `DoNot` was `1`?
 Why or why not?
 
-11. Represent the Boolean expression
+15. Represent the Boolean expression
 `A + (B xor C)`
 using only a multiplexor.
 
-12. Consider representing the Boolean expression
+16. Consider representing the Boolean expression
 `(A + B)*(C + ~A) + D + (E*F) + (F xor G)`
 using a multiplexor.
     * how many selector inputs would be required?
     * how many data inputs?
 
-13. Why might representing the expression above using a multiplexor be a bad
+17. Why might representing the expression above using a multiplexor be a bad
 idea?
 How does this relate to truth tables?
 
-14. Your lab partner wants to speed up your 16-bit adder using the following
+18. Your lab partner wants to speed up your 16-bit adder using the following
 idea:
    * use two 16-bit ripple-carry adders,
    one with a carry-in of 1 and the other with a carry-in of 0
@@ -125,7 +143,7 @@ idea:
 How would you explain to them that this is a bad idea?
 How could the idea be improved?
 
-15. Given `G3:2`, `G_1:0`, `P_3:2`, `P_1:0`, and a carry-in `C_in`,
+19. Given `G3:2`, `G_1:0`, `P_3:2`, `P_1:0`, and a carry-in `C_in`,
 give a Boolean expression to determine `C_3`.
 That is, if you know the generate and propogate logic for 2-bit blocks,
 how can you determine the carry-out for the combined 4-bit block?
