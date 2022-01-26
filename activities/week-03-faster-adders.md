@@ -117,11 +117,34 @@ using a multiplexor.
 idea?
 How does this relate to truth tables?
 
-18. Your lab partner wants to speed up your 16-bit adder using the following
+18. If it is both rainy and cold,
+then I will carry an umbrella.
+Otherwise, I will not carry an umbrella.
+Design a circuit describing my behavior using only a multiplexor and no other
+gates.
+
+19. Design a circuit that takes in the current month as a number 0 - 11 and
+outputs the next month.
+* You may use an adder as a black box
+* You may assume you have another black box called `lessThan`.
+  This box may take two inputs of whatever size you choose and outputs `1` if
+  its first input is less than its second input and `0` otherwise.
+* Hint: a mux will be helpful here
+
+20. Show that a 4:1 mux is logically complete.
+
+21. Your lab partner wants to speed up your 16-bit adder using the following
 idea:
    * use two 16-bit ripple-carry adders,
    one with a carry-in of 1 and the other with a carry-in of 0
    * attach the outputs to multiplexors and use the actual carry in as the
    selector for the muxes
+
 How would you explain to them that this is a bad idea?
 How could the idea be improved?
+
+22. Consider a 4-bit carry-lookahead adder split into 2-bit blocks.
+* How many full adders would this circuit use?
+* What is the propogation delay of this circuit in terms of `T_FA` and `T_mux`?
+* How does this correspond to the propogation delay of a 4-bit ripple-carry
+  adder?
