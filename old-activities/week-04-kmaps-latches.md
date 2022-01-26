@@ -19,6 +19,12 @@ Note: some questions are taken entirely or in part from your textbook.
 
 # General Questions
 
+19. Given `G3:2`, `G_1:0`, `P_3:2`, `P_1:0`, and a carry-in `C_in`,
+give a Boolean expression to determine `C_3`.
+That is, if you know the generate and propogate logic for 2-bit blocks,
+how can you determine the carry-out for the combined 4-bit block?
+(Hint: The expression should look familiar.)
+
 1. Consider the Boolean expression
 ```
 A'B'C' + A'BC' + A'B'C + AB'C
