@@ -82,3 +82,10 @@ How can a D latch handle this problem?
 15. Design a timing diagram
 (a view of the input `D` and the clock over time)
 for which a D latch and a D flip-flop behave very differently.
+
+16. Create a circuit that stores one bit of state and takes one input.
+At the rising edge of the clock, this circuit will
+* flip its stored bit if the input is `0`
+* keep its stored bit if the input is `1`
+
+You may use a D flip-flop and/or D latch as a black box.
