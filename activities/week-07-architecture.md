@@ -1,22 +1,3 @@
-In your groups, answer the following questions.
-No need to report the answers to me --
-this is just for practice.
-We may not get through all of the questions every week.
-You may want to take notes during the discussion,
-because these questions will be helpful in reviewing for exams.
-
-I will be dropping in and out of rooms to facilitate to the discussions and in
-case you have any questions.
-Think of it like me walking around the classroom and listening to different
-groups.
-Again, this isn't meant to be for a grade,
-so don't be concerned about giving a wrong answer even if I am in the room.
-You can also flag me down in Zoom if you have a question even if I'm not in the
-room
-(I think the button in Zoom looks like a question mark).
-
-Note: some questions are taken entirely or in part from your textbook.
-
 # General Questions
 
 1. Describe the difference between architecture and microarchitecture.
@@ -85,36 +66,3 @@ indicate whether the immediate is signed or unsigned.
 11. Explain why knowing the opcode is sufficient to identify a particular
 I-type instruction but insufficient to identify a particular R-type
 instruction.
-
-12. Explain, in general terms,
-why or how a single circuit is able to handle different instruction types.
-
-13. Consider the datapath we implemented for R-type and (some) I-type
-instructions, pictured below.
-
-![R and I datapath](images/r_i_type.png)
-
-What are the values of `RegDst` and `ALUSrc` when the instruction is `addi`?
-
-For the next two questions, consider the following code snippet:
-```
-    addi $t0, $0, 2
-    addi $t1, $0, 4
-    addi $s0, $0, 0
-
-    sll $t2, $t0, 1
-    beq $t1, $t2, L1
-    addi $s0, $s0, 8
-
-L1:
-    beq $t0, $t1, L2
-    addi $s0, $s0, 4
-
-L2:
-    addi $s0, $s0, 2
-```
-
-14. What is the value in `$s0` when the code finishes?
-
-15. What are the values of the immediates stored in the two branch
-instructions?
