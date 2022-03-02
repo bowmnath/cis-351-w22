@@ -100,3 +100,87 @@ while x > 1:
     y = y + x
     x = x/2
 ```
+
+For the next few questions, consider the following diagram.
+
+![R, I, and branch datapath](images/r_i_beq_type.png)
+
+17. If the sign-extender were removed, how would it affect
+    * addi?
+    * add?
+    * branch?
+
+18. If the `sll` shifted by 3 instead of 2, what would instruction(s) would the
+    change affect?
+    How would it change them?
+    Give any upsides or downsides.
+
+
+19. Modify the circuit to include a `bne` instruction as well as a `beq`
+    instruction.
+    You may add new control wires if needed.
+
+20. Give an example of an instruction that would not work if the `RegWrite`
+    flag were not present
+    (i.e., if the register file were always writable).
+
+21. As a first step toward moving to a 64-bit architecture,
+    the designers of MIPS decide to move to 64-bit instructions that simply
+    include padding (`0`s) as the last 32 bits and leave everything else about
+    the instruction formats the same.
+    What change(s) would need to be made to the diagram to support this new
+    format?
+    (Hint: It's not much.)
+
+22. Why is this not a valid MIPS instruction: `addi $t0, $t1, 65500`?
+
+23. If I want to get the number `0x03510000` into a register,
+    how can I do that in three instructions or fewer in MIPS?
+
+24. If I want to get the number `0x03510452` into a register,
+    how can I do that in three instructions or fewer in MIPS?
+
+25. If you wanted to get the effect of the instruction from (22) in MIPS,
+    how could you go about it?
+    (It may take more than one instruction.)
+
+26. We usually consider `$rt` to be the destination register for I-type
+    instructions.
+    Give an example of an I-type instruction for which this is not an accurate
+    description of `$rt`.
+
+27. The address of the first line of code below is `0x0004080`.
+    What is the address of the line marked `A`?
+    ```
+    beq $7 $8 gohere
+    addi $19 $19 2
+    gohere:
+    sub $19 $8 $7
+    j goelsewhere
+    ```
+28. The current value of $PC is `0x000498c`.
+    If the current instruction is a jump instruction,
+    is there anywhere it *cannot* jump to?
+
+29. Consider an architecture that has just one branch instruction --
+    branch-if-equal-to-zero (`beqz`).
+    This instruction takes just one register and a label and branches if the
+    contents of the register are zero.
+    How could you write the following conditionals using just that type of
+    branch statement?
+    (You will likely need other assembly statements before your branch
+    statement.)
+
+    **Snippet 1**
+    ```
+    if a != 5:
+      a = 6
+    ... # do stuff
+    ```
+
+    **Snippet 2**
+    ```
+    if a > 5:
+      a = 6
+    ... # do stuff
+    ```
