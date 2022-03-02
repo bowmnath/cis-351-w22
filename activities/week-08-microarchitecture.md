@@ -103,7 +103,7 @@ while x > 1:
 
 For the next few questions, consider the following diagram.
 
-![R, I, and branch datapath](images/r_i_beq_type.png)
+![R, I, and branch datapath](images/i_r_beq_type.png)
 
 17. If the sign-extender were removed, how would it affect
     * addi?
