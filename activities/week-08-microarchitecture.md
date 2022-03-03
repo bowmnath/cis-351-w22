@@ -105,7 +105,8 @@ For the next few questions, consider the following diagram.
 
 ![R, I, and branch datapath](images/i_r_beq_type.png)
 
-17. If the sign-extender were removed, how would it affect
+17. If the sign-extender were replaced with a zero-extender,
+    how would it affect
     * addi?
     * add?
     * branch?
@@ -184,3 +185,15 @@ For the next few questions, consider the following diagram.
       a = 6
     ... # do stuff
     ```
+
+30. For both jump instructions and both branch instructions below,
+what is the value of `place`
+(i.e., what value is actually encoded in the instruction itself)?
+```
+0x00400000 |       j place
+0x00400004 |       j place
+0x00400008 |       beq $t1, $0, place
+0x0040000C |       beq $s1, $s2, place
+0x00400010 | place: or $t3, $t0, $t1
+0x00400014 |       xor $t4, $t0, $t1
+```
