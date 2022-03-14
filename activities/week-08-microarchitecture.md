@@ -156,10 +156,10 @@ For the next few questions, consider the following diagram.
     beq $7 $8 gohere
     addi $19 $19 2
     gohere:
-    sub $19 $8 $7
+    sub $19 $8 $7  # A
     j goelsewhere
     ```
-28. The current value of $PC is `0x000498c`.
+28. The current value of `$PC` is `0x000498c`.
     If the current instruction is a jump instruction,
     is there anywhere it *cannot* jump to?
 
