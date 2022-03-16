@@ -19,6 +19,27 @@ Note: some questions are taken entirely or in part from your textbook.
 
 # General Questions
 
+8. The following function does not preserve registers correctly.
+   Modify it so that it does.
+
+   ```
+   fun:
+        addi $s0, $0, 8
+        addi $t1, $0, 4
+
+        slt $t4, $a0, $s0
+        slt $t5, $t1, $a0
+        and $v0, $t4, $t5
+
+        jr $ra
+   ```
+
+9. A compiler takes high-level code and converts it to assembly code.
+   Given how close assembly code is to machine code,
+   what useful purpose(s) does the assembler serve?
+   (You have likely never called an assembler directly --
+   your compiler calls it for you.)
+
 1. What is a `syscall` in MIPS?
    Give two examples of things you can do with a `syscall`.
 
