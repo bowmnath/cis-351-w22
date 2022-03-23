@@ -133,22 +133,3 @@ addr       | data
         j loop
     done:
     ```
-
-13. Consider the following assembly function call.
-    Give the values of `$a0`, `$t0`, and `$v0` at locations marked `A` and `B`
-    in the code.
-    Denote any value you do not know as `X`.
-
-    ```
-        addi $a0, $0, 5
-        addi $t0, $0, 8
-        jal fun
-        ...  # A: After function call
-
-    fun:
-        # B: During function call, before executing
-        li $t0, 6
-        sll $a0, $a0, 2
-        add $v0, $a0, $t0
-        jr $ra
-    ```
