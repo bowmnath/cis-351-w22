@@ -104,7 +104,7 @@ integers.
         addi $s0, $a0, 2
         addi $s1, $a1, 1
 
-        # Point C
+        # Point B
 
         sub $v0, $s0, $s1
 
