@@ -1,25 +1,6 @@
-In your groups, answer the following questions.
-No need to report the answers to me --
-this is just for practice.
-We may not get through all of the questions every week.
-You may want to take notes during the discussion,
-because these questions will be helpful in reviewing for exams.
-
-I will be dropping in and out of rooms to facilitate to the discussions and in
-case you have any questions.
-Think of it like me walking around the classroom and listening to different
-groups.
-Again, this isn't meant to be for a grade,
-so don't be concerned about giving a wrong answer even if I am in the room.
-You can also flag me down in Zoom if you have a question even if I'm not in the
-room
-(I think the button in Zoom looks like a question mark).
-
-Note: some questions are taken entirely or in part from your textbook.
-
 # General Questions
 
-8. The following function does not preserve registers correctly.
+1. The following function does not preserve registers correctly.
    Modify it so that it does.
 
    ```
@@ -34,22 +15,61 @@ Note: some questions are taken entirely or in part from your textbook.
         jr $ra
    ```
 
-9. A compiler takes high-level code and converts it to assembly code.
+2. A compiler takes high-level code and converts it to assembly code.
    Given how close assembly code is to machine code,
    what useful purpose(s) does the assembler serve?
    (You have likely never called an assembler directly --
    your compiler calls it for you.)
 
-1. What is a `syscall` in MIPS?
+3. What is a `syscall` in MIPS?
    Give two examples of things you can do with a `syscall`.
 
-2. The base address of an array is stored in `$t0`.
+4. The instruction `li` is actually a pseudo-instruction --
+   it is not part of the architecture,
+   but it is converted to a "real" instruction for you.
+   Give the real instruction equivalent to the following:
+   `li $t0, 8`.
+   (Hint: you can check in MARS if you are not sure.)
+
+5. The base address of an array is stored in `$t0`.
    How does the process of accessing the second element array change,
    if at all,
    depending on whether the array is on the stack, the heap, or in global
    memory?
 
-3. The code below does not do what the comments suggest.
+6. Consider the setup below.
+   Write code to swap the values of `a` and `b`.
+   Your code does not need to be in a function.
+   ```
+   .data
+
+        a: .word 1
+        b: .word 35
+
+   .text
+        # your code here
+   ```
+
+7. Consider the setup below.
+   This time, the value of `b` was stored on the stack.
+   Write code to swap the values of `a` and `b`.
+   Your code does not need to be in a function.
+   ```
+   .data
+
+        a: .word 1
+
+   .text
+
+   fun:
+        addi $sp, $sp, -4
+        addi $t0, $0, 35
+        sw $t0, 0($sp)  # storing b
+
+        ... # add code here
+   ```
+
+8. The code below does not do what the comments suggest.
    How would you fix the code to match the comments?
 
    ```
@@ -69,10 +89,31 @@ Note: some questions are taken entirely or in part from your textbook.
         lw $t2, 0($t1)
    ```
 
+9. Write a *recursive* function called `addup` that takes a single integer
+   argument `n` and returns `2*addup(n - 1)`.
+   Assume `addup(1) = 1`.
+   For example,
+   `addup(3) = 2*addup(2) = 2*(2*(addup(1))) = 2*(2*(1)) = 4`.
+   You may also assume that nobody will pass your function a number less than
+   1 (a poor assumption in practice).
+
+   You can use the example base case below if you find it helpful.
+   ```
+   addup:
+        li $t0, 1
+        bne $a0, $t0, notbase
+        li $v0, 1
+        jr $ra
+
+   notbase:
+        # your code here
+   ```
+<!--
 4. Describe in your own words what a cache is.
    <!-- Small, fast memory where we hold data we expect we will need in the
    near future. -->
 
+<!--
 5. How, if at all, does the use of a cache change
     * the results of a program?
     * the performance of a program?
@@ -83,6 +124,7 @@ Note: some questions are taken entirely or in part from your textbook.
 7. What is spatial locality?
    Give an example of spatial locality in your daily life.
 
+-->
 <!--
 1. Looking at the memory hierarchy,
    (cheap) memory that we have a lot of is always slower than (expensive)
@@ -93,7 +135,7 @@ Note: some questions are taken entirely or in part from your textbook.
    we would replace the other kind entirely.
    Put another way, our memory *is* big, fast, and cheap compared to older
    technologies.
--->
 
 8. Start working on the
    [direct-mapped cache handout](/misc/direct-cache-handout.pdf).
+-->
