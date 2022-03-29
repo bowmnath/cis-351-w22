@@ -53,7 +53,9 @@
 7. Consider the setup below.
    This time, the value of `b` was stored on the stack.
    Write code to swap the values of `a` and `b`.
-   Your code does not need to be in a function.
+   Note that in this case,
+   you code would need to occur before `fun` returns.
+   Otherwise, `b` will have been removed from the stack.
    ```
    .data
 
@@ -89,17 +91,17 @@
         lw $t2, 0($t1)
    ```
 
-9. Write a *recursive* function called `addup` that takes a single integer
-   argument `n` and returns `2*addup(n - 1)`.
-   Assume `addup(1) = 1`.
+9. Write a *recursive* function called `recpow` that takes a single integer
+   argument `n` and returns `2*recpow(n - 1)`.
+   Assume `recpow(1) = 1`.
    For example,
-   `addup(3) = 2*addup(2) = 2*(2*(addup(1))) = 2*(2*(1)) = 4`.
+   `recpow(3) = 2*recpow(2) = 2*(2*(recpow(1))) = 2*(2*(1)) = 4`.
    You may also assume that nobody will pass your function a number less than
    1 (a poor assumption in practice).
 
    You can use the example base case below if you find it helpful.
    ```
-   addup:
+   recpow:
         li $t0, 1
         bne $a0, $t0, notbase
         li $v0, 1
