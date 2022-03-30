@@ -110,34 +110,61 @@
    notbase:
         # your code here
    ```
-<!--
-4. Describe in your own words what a cache is.
+10. Describe in your own words what a cache is.
    <!-- Small, fast memory where we hold data we expect we will need in the
    near future. -->
 
-<!--
-5. How, if at all, does the use of a cache change
+11. How, if at all, does the use of a cache change
     * the results of a program?
     * the performance of a program?
 
-6. What is temporal locality?
-   Give an example of temporal locality in your daily life.
+12. Assume you own too many PC games to keep them all on your computer at once.
+    At any given time,
+    you have a subset of them downloaded that you can readily play.
+    The other games are still available to you,
+    but you need to download them before playing.
+    Describe how this example relates to caches.
 
-7. What is spatial locality?
-   Give an example of spatial locality in your daily life.
+13. In the scenario above,
+    you decide that keep the last ten games that you have played stored on
+    your local machine.
+    What idea from this class are you taking advantage of?
 
--->
+14. In the scenario above,
+    whenever you decide you want to play a real-time strategy game,
+    you download a few of your other real-time strategy games along with it
+    even if you do not intend to play them today.
+    What idea from this class are you taking advantage of?
+    What possible downside could there be?
+
+15. You buy yourself a new gaming machine as a present for successfully passing
+    CIS 351.
+    This machine has a fast, small SSD and a slow, large hard disk.
+    You still store 10 games on the SSD.
+    But, you now store an additional 50 games on the hard disk so that you do
+    not need to download those games to play them --
+    you can simply move the games from the hard disk to the SSD.
+    Your library consists of hundreds of games,
+    so you still have games that do not fit on your machine and must be
+    downloaded if you want to play them.
+    What concept from caching are you taking advantage of with this new setup
+    that you could not take advantage of before?
+
+16. Give an example of temporal locality in your daily life.
+
+17. Give an example of spatial locality in your daily life.
+
+18. Looking at the memory hierarchy,
+    (cheap) memory that we have a lot of is always slower than (expensive)
+    memory that we do not have a lot of.
+    Why are there no fast, cheap, and large options?
+
 <!--
-1. Looking at the memory hierarchy,
-   (cheap) memory that we have a lot of is always slower than (expensive)
-   memory that we do not have a lot of.
-   Why are there no fast, cheap, and large options?
-
    Answer: because if something were both faster *and* cheaper,
    we would replace the other kind entirely.
    Put another way, our memory *is* big, fast, and cheap compared to older
    technologies.
-
-8. Start working on the
-   [direct-mapped cache handout](/misc/direct-cache-handout.pdf).
 -->
+
+19. Start working on the
+    [direct-mapped cache handout](/handouts/direct-cache-handout.pdf).
