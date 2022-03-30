@@ -150,11 +150,22 @@
     What concept from caching are you taking advantage of with this new setup
     that you could not take advantage of before?
 
-16. Give an example of temporal locality in your daily life.
+16. You are programming a web interface for a popular sandwich shop, MIPSway.
+    You decide to include a user's last three orders as buttons that they can
+    press to quickly reorder.
+    Also, you set up the site so that whenever a user puts bacon and lettuce
+    on a sandwich,
+    a box will pop up asking whether the user wants to add tomatoes.
+    Explain why you may have made these choices using ideas from this class.
+    (Hint: the answer is not just "caching.")
 
-17. Give an example of spatial locality in your daily life.
+17. Give an example of temporal locality in your daily life or in something
+    you might program.
 
-18. Looking at the memory hierarchy,
+18. Give an example of spatial locality in your daily life or in something
+    you might program.
+
+19. Looking at the memory hierarchy,
     (cheap) memory that we have a lot of is always slower than (expensive)
     memory that we do not have a lot of.
     Why are there no fast, cheap, and large options?
@@ -166,5 +177,5 @@
    technologies.
 -->
 
-19. Start working on the
+20. Start working on the
     [direct-mapped cache handout](/handouts/direct-cache-handout.pdf).
