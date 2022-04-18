@@ -57,7 +57,7 @@
    and then tape the paper on.
 
    If you have many presents to wrap but only one pair of scissors and one
-   piece of tape,
+   roll of tape,
    explain the three of you could work together to get the presents wrapped
    faster.
 
