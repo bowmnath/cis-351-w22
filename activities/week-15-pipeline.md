@@ -100,3 +100,109 @@ use for reference if needed.
    lw $t1 4($s4)
    slti $s6 $t1 0
    ```
+
+![pipelined processor](images/pipelined-processor.png)
+
+8. Consider the image above.
+   In which stage is the decision about whether to branch made in this version
+   of the CPU?
+   For how many instructions would the pipeline need to stall if it did not
+   perform branch prediction?
+   If the processor did perform branch prediction,
+   what would be the corresponding branch misdirection penalty
+   (i.e., how many cycles are wasted if we "guess wrong" about whether to
+   branch)?
+
+![pipelined processor with branch prediction](images/pipelined-processor-final.png)
+
+9. Consider the image above.
+   In which stage is the decision about whether to branch made in this version
+   of the CPU?
+   For how many instructions would the pipeline need to stall if it did not
+   perform branch prediction?
+   If the processor did perform branch prediction,
+   what would be the corresponding branch misdirection penalty
+   (i.e., how many cycles are wasted if we "guess wrong" about whether to
+   branch)?
+
+10. Consider a pipelined CPU where the branch prediction was not made until the
+    Writeback stage.
+    Such a processor could not safely use branch prediction --
+    it would need to stall until the decision about whether to branch had been
+    made.
+    This is because if the processor tried to perform branch prediction,
+    it might change program state
+    (contents of memory or registers)
+    in an undesirable way.
+    Why might this occur?
+    (Hint: consider in which stages we change the contents of memory or
+    registers.)
+
+11. Consider the following code snippet:
+    ```
+    beq $0 $0 foo
+    addi $t0 $t0 1
+    foo:
+    add $v0 $0 $t0
+    ...
+    ```
+    What is the next instruction that should occur after the `beq`?
+    If a pipelined processor is using branch prediction,
+    what is the next instruction that will be fetched after the `beq`
+    (i.e., which instruction is in the Fetch stage when `beq` is in the Decode
+    stage)?
+
+12. Consider the following code:
+    ```
+    addi $t0 $t1 1
+    add $t2 $t3 $t4
+    and $s0 $s1 $s2
+    or $s3 $s4 $s5
+    slt $v0 $a0 $a1
+    ```
+    Assume `addi` is fetched in Cycle 0.
+    During Cycle 4,
+    what are the values going into `A1` and `A2` in the diagram above?
+    (These are the two read inputs to the register file.)
+
+13. For the same code snippet,
+    what value is going into `A3` during Cycle 4?
+
+14. Which type of code will generally suffer more from branch misdirection
+    penalties?
+    * Code with many loops
+    * Code with many conditionals
+
+    Why?
+
+15. Consider the following code snippet.
+    ```
+    addi $t0 $t1 1
+    beq $t0 $t1 foo
+    addi $t0 $t0 1
+    addi $t0 $t0 1
+    addi $t0 $t0 1
+    foo:
+    ...
+    ...
+    ```
+
+    Will the code be more efficient, less efficient,
+    or about the same depending on whether the CPU uses branch prediction or
+    stalling?
+
+16. Consider the following code snippet.
+    ```
+    addi $t0 $t1 0
+    beq $t0 $t1 foo
+    addi $t0 $t0 1
+    addi $t0 $t0 1
+    addi $t0 $t0 1
+    foo:
+    ...
+    ...
+    ```
+
+    Will the code be more efficient, less efficient,
+    or about the same depending on whether the CPU uses branch prediction or
+    stalling?
